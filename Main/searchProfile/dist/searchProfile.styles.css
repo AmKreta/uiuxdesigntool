@@ -1,0 +1,6 @@
+.profileSearchContainer {
+  background: #9400D3;
+  min-height: calc(100% - 4.5vw);
+  width: 100%;
+  padding: 2vw;
+}

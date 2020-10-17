@@ -1,0 +1,49 @@
+.Button{
+   /*background:rgb(58, 58, 218);*/
+   /*background:rgb(122, 1, 122);*/
+   background:#9400D3;
+   padding:.25em .5em;
+   color:white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight:bold;
+   word-wrap:break-word;
+   height:auto;
+   border:none;
+   outline:none;
+   margin:1%;
+   border:1px solid white;
+   
+   &:hover{
+    /*background:rgb(68, 68, 255);*/
+    background:#8200b9;
+    cursor:pointer;
+   }
+
+   &.xsmall{
+      font-size:.7em;
+   }
+
+   &.small{
+    font-size:1em;
+   }
+
+   &.medium{
+    font-size:1.5em;
+   }
+
+   &.large{
+    font-size:2em;
+   }
+
+   &.inverted{
+      background:#7a017a;
+      &:hover{
+         background:#5f015f;
+      }
+   }
+}
+
+
+@media only screen and (max-width: 400px){
+    
+}

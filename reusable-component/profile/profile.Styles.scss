@@ -1,0 +1,13 @@
+.profile{
+    width:100%;
+    height:calc(100% - 4.5vw);
+    padding:2vw;
+    background:#9400D3;
+    .profileContent{
+        background:#7a017a;
+        box-shadow:10px 10px 5px 0px #5f015f;
+        width:75%;
+        padding:.5vw;
+        margin:1vw auto 3vw auto;
+    }
+}

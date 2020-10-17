@@ -1,0 +1,27 @@
+.container{
+    height:90%;
+    width:100%;
+    display:flex;
+    flex-flow:column wrap;
+    justify-content:center;
+    align-items:center;
+    background:#9400D3;
+    h1{
+        margin-bottom:1%;
+        font-size:3em;
+        color:white;
+        margin-top:2%;
+    }
+    .signUp-form{
+        width:30%;
+        background:rgb(122, 1, 122);
+        box-shadow:10px 10px 10px 3px rgb(95, 1, 95);
+        padding-bottom:.5%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .signUp-form{
+        width:100% !important;
+    }
+}

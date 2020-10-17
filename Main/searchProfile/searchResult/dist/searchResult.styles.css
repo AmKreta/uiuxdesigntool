@@ -1,0 +1,31 @@
+.searchResult {
+  height: 100%;
+  width: 60%;
+  margin: 2vw auto;
+  padding: 0.5%;
+  background: #7a017a;
+  color: white;
+  box-shadow: 10px 10px 5px 0px #5f015f;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.searchResult .information {
+  margin: 0 2%;
+  text-align: left;
+  width: 32%;
+}
+.searchResult .information h1, .searchResult .information h2, .searchResult .information h3, .searchResult .information h4 {
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 2px;
+}
+.searchResult .information h4 {
+  opacity: 0.6;
+  margin: 5px;
+}
+.searchResult .contactInfo {
+  font-size: 10px;
+  line-height: 1.3em;
+}

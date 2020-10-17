@@ -1,0 +1,31 @@
+.searchResult{
+    height:100%;
+    width:60%;
+    margin:2vw auto;
+    padding:.5%;
+    background:#7a017a;
+    color:white;
+    box-shadow: 10px 10px 5px 0px #5f015f;
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:space-around;
+    .information{
+        margin:0 2%;
+        text-align:left;
+        h1,h2,h3,h4{
+            font-weight:normal;
+            line-height:1.2em;
+            margin:2px;
+        }
+        h4{
+            opacity:.6;
+            margin:5px;
+        }
+        width:32%;
+    }
+    .contactInfo{
+        font-size:10px;
+        line-height:1.3em;
+    }
+}

@@ -1,0 +1,34 @@
+.displayProfile {
+  background-size: 100% 100%;
+  display: inline-block;
+  transition: 0.25s ease-in-out;
+}
+.displayProfile:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.25s ease-in-out;
+}
+.displayProfile.x-large {
+  width: 18vw;
+  height: 18vw;
+}
+.displayProfile.large {
+  width: 15vw;
+  height: 15vw;
+}
+.displayProfile.medium {
+  width: 12vw;
+  height: 12vw;
+}
+.displayProfile.small {
+  height: 9vw;
+  width: 9vw;
+}
+.displayProfile.x-small {
+  height: 6vw;
+  width: 6vw;
+}
+.displayProfile.xx-small {
+  height: 5vw;
+  width: 5vw;
+}

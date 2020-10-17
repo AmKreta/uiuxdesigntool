@@ -1,0 +1,14 @@
+.profilePicLabel{
+    background:#3a3ada;
+    color:white;
+    font-family:sans-serif;
+    padding:.25vw .5vw;
+    margin-bottom:.5vw;
+    font-weight:bold;
+    font-size:1.3em;;
+    display:inline-block;
+    &:hover{
+        background:#4444ff;
+        cursor:pointer;
+    }
+}

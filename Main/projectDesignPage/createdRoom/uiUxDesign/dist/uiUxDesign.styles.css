@@ -1,0 +1,47 @@
+.uiUxDesign {
+  background: white;
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+.uiUxDesign .toolBarA {
+  width: 5%;
+  height: 100%;
+  background: #7a017a;
+}
+.uiUxDesign .toolBarA .tool {
+  color: white;
+  height: 2vw;
+  width: 2vw;
+  display: block;
+  margin: 8px auto;
+  text-align: center;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+.uiUxDesign .toolBarA .tool.ellipse {
+  transform: scaleX(1.3);
+}
+.uiUxDesign .toolBarA .tool:hover {
+  background: #e002e0;
+  transition: 0.25s ease-in-out;
+}
+.uiUxDesign .toolBarA .tool.activeTool {
+  background: #e002e0;
+  transition: 0.25s ease-in-out;
+}
+.uiUxDesign .drawingTool {
+  width: 75%;
+  height: 100%;
+  overflow: hidden;
+}
+.uiUxDesign .toolBarB {
+  width: 20%;
+  height: 100%;
+  background: #7a017a;
+  overflow: scroll;
+}

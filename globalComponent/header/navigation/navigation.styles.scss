@@ -1,0 +1,37 @@
+.appNavigation {
+    width: 30%;
+
+    .appNavigationItems {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        .appNavigationItem {
+            display: inline-block;
+            transition: .25s ease-in-out;
+
+            &.icon {
+                size: 2.5vw;
+            }
+
+            .react-icons {
+                color: rgba(219, 217, 217, 0.6);
+                height: 2.5vw;
+                width: 2.5vw;
+
+                &.active {
+                    transform: scale(1.25);
+                    color: rgba(255, 255, 255, 1);
+                }
+
+                &:hover {
+                    transform: scale(1.25);
+                    transition: .25s ease-in-out;
+                }
+            }
+
+        }
+    }
+}

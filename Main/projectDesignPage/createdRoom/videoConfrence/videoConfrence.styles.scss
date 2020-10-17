@@ -1,0 +1,11 @@
+.videoConfrencing{
+    background:#7a017a;
+    grid-column:1 / 2;
+    grid-row:1 / span 2;
+    padding:1%;
+    video{
+        width:100%;
+        border:5px solid white;
+    }
+    overflow:scroll;
+}
