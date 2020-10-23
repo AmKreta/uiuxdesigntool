@@ -1,0 +1,18 @@
+.pageContainer {
+    height: 100%;
+    width: 25%;
+    display:inline-block;
+    margin-right:1%;
+    position:relative;
+    .page{
+        height:100%;
+        width:100%;
+        background:white;
+        &:hover{
+            opacity:.6;
+        }
+        &.activeProjectPage{
+            opacity:.6;
+        }
+    }
+}

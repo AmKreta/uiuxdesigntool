@@ -36,7 +36,7 @@ const SVG = (props) => {
                 clearInterval(captureInterval);
             }
         }
-    }, [ svgStreamRef, elements ]);
+    }, [svgStreamRef, elements]);
     /* base class for shapes */
 
     /*
@@ -177,7 +177,17 @@ const SVG = (props) => {
                 key={id}
                 id={id}
             />
-        )
+        );
+        this.renderRaw = (id) => (
+            <circle
+                cx={this.posX}
+                cy={this.posY}
+                r={this.r}
+                style={this.style()}
+                key={id}
+                id={id}
+            />
+        );
     }
 
     /* class for Rectangle */
@@ -203,7 +213,17 @@ const SVG = (props) => {
                 key={id}
                 id={id}
             />
-        )
+        );
+        this.renderRaw = (id) => (
+            <rect
+                x={this.posX}
+                y={this.posY}
+                width={this.width}
+                height={this.height}
+                style={this.style()}
+                key={id}
+            />
+        );
     }
 
     /* class for Ellipse */
@@ -229,7 +249,17 @@ const SVG = (props) => {
                 key={id}
                 id={id}
             />
-        )
+        );
+        this.renderRaw = (id) => (
+            <ellipse
+                cx={this.posX}
+                cy={this.posY}
+                rx={this.rX}
+                ry={this.rY}
+                style={this.style()}
+                key={id}
+            />
+        );
     }
 
     /* class for Line */
@@ -256,6 +286,16 @@ const SVG = (props) => {
                 id={id}
             />
         );
+        this.renderRaw = (id) => (
+            <line
+                x1={this.x1}
+                y1={this.y1}
+                x2={this.x2}
+                y2={this.y2}
+                style={this.style()}
+                key={id}
+            />
+        );
     }
 
     /* class for Polygon */
@@ -277,6 +317,15 @@ const SVG = (props) => {
                 onContextMenu={this.onContextMenu}
                 key={id}
                 id={id}
+            />
+        );
+        this.renderRaw = (id) => (
+            <polygon
+                points={this.points.reduce((a, b) => {
+                    return a + b.toString() + ' ';
+                }, '')}
+                style={this.style()}
+                key={id}
             />
         );
     }
@@ -301,6 +350,15 @@ const SVG = (props) => {
                 id={id}
             />
         );
+        this.renderRaw = (id) => (
+            <polyline
+                points={this.points.reduce((a, b) => {
+                    return a + b.toString() + ' ';
+                }, '')}
+                style={this.style()}
+                key={id}
+            />
+        );
     }
 
     /* class for text */
@@ -322,6 +380,16 @@ const SVG = (props) => {
                 onContextMenu={this.onContextMenu}
                 key={id}
                 id={id}
+            >
+                {this.Text}
+            </text>
+        );
+        this.renderRaw = (id) => (
+            <text
+                x={this.posX}
+                y={this.posY}
+                style={this.style()}
+                key={id}
             >
                 {this.Text}
             </text>

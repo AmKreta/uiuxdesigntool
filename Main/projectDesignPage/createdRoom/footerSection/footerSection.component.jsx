@@ -5,14 +5,14 @@ import './footerSection.styles.scss';
 import ChatSection from './chatSection/chatSection.component';
 import MembersInfo from './membersInfo/membersinfo.component';
 import ImportantPoints from './importantPoints/importantPoints.component';
+import Pages from './pages/pages.component';
 
 import AsyncRequestLinkContext from '../../../../globalContext/asyncRequestLinkContext';
 import UserInfoContext from '../../../../globalContext/userInfoContext';
 
 
-import { BsFillChatFill } from 'react-icons/bs';
-import { BsFillPeopleFill } from 'react-icons/bs';
-import { AiFillStar } from 'react-icons/ai';
+import { BsFillChatFill, BsIntersect, BsFillPeopleFill } from 'react-icons/bs';
+import { AiFillStar, AiTwotoneSave } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 
 const FooterSection = (props) => {
@@ -70,7 +70,17 @@ const FooterSection = (props) => {
         <div className='footerSection'>
 
             <div className='selectTab'>
-
+                <IconContext.Provider value={{ className: 'footerTab' }}>
+                    <AiTwotoneSave
+                        title='save'
+                    />
+                </IconContext.Provider>
+                <IconContext.Provider value={{ className: `footerTab ${activePage === 'pages' ? 'activeTab' : null}` }}>
+                    <BsIntersect
+                        title='pages'
+                        onClick={(e) => { setActivePage('pages') }}
+                    />
+                </IconContext.Provider>
                 <IconContext.Provider value={{ className: `footerTab ${activePage === 'chatSection' ? 'activeTab' : null}` }}>
                     <BsFillChatFill
                         title='chat section'
@@ -103,6 +113,9 @@ const FooterSection = (props) => {
                     }
                     else if (activePage === 'membersInfo') {
                         return <MembersInfo members={members} />
+                    }
+                    else if (activePage === 'pages') {
+                        return <Pages />
                     }
                 })()
             }

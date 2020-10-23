@@ -1,0 +1,39 @@
+.pages {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-between;
+    height: 70%;
+
+    .pageCollection {
+        height: 100%;
+        width: 90%;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: auto;
+        text-align: left;
+    }
+
+    .AddPages {
+        width: 8%;
+        border-radius: 15px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        opacity: .6;
+        transition: .25s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            transition: .25s ease-in-out;
+        }
+
+        .addPage {
+            height:2vw;
+            width:2vw;
+            color:white;
+        }
+    }
+}

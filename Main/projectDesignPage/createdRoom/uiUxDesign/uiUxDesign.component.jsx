@@ -21,7 +21,7 @@ function Page() {
 
 class UiUxDesign extends React.Component {
     constructor(props) {
-        /* projectDesignSocket,isAdmin,userList,currentRoom */
+        /* projectDesignSocket,isAdmin,userList,currentRoom ,setFooterPagesProp*/
         super();
         this.state = {
             page: [new Page()],
@@ -29,6 +29,18 @@ class UiUxDesign extends React.Component {
             activeKey: null,
             pointsArray: []
         };
+    }
+
+    addNewPage = () => {
+        this.setState(prevState => {
+            return ({
+                page: [...prevState.page, new Page()]
+            });
+        });
+    }
+
+    setActivePage = (pageNo) => {
+        this.setState({ activePage: pageNo });
     }
 
     setActiveColor = (rgbaString) => {
@@ -72,7 +84,7 @@ class UiUxDesign extends React.Component {
     deleteElement = (elementId) => {
         let PAGE = this.state.page;
         PAGE[this.state.activePage].elements.delete(elementId);
-        this.setState({page:PAGE});
+        this.setState({ page: PAGE });
     }
 
     editActiveElement = ({ action, payload }) => {
@@ -154,6 +166,17 @@ class UiUxDesign extends React.Component {
         this.setState({ page: PAGE });
     }
 
+    componentDidUpdate(prevProps, prevState, snapShot) {
+        if (this.state !== prevState) {
+            this.props.setFooterPagesProp({
+                activeProjectPage: this.state.activePage,
+                setActiveProjectPage: this.setActivePage,
+                addPage: this.addNewPage,
+                pages: this.state.page
+            });
+        }
+    }
+
     componentDidMount() {
         window.onkeydown = (e) => {
             //e.preventDefault();
@@ -165,6 +188,12 @@ class UiUxDesign extends React.Component {
             e.stopPropagation();
             this.setState({ activeKey: null });
         }
+        this.props.setFooterPagesProp({
+            activeProjectPage: this.state.activePage,
+            setActiveProjectPage: this.setActivePage,
+            addPage: this.addNewPage,
+            pages: this.state.page
+        });
     }
 
     render() {
@@ -203,7 +232,7 @@ class UiUxDesign extends React.Component {
                             </ActiveELementInfoContext.Provider>
                         )
                         : (
-                            <Video {...this.props}/>
+                            <Video {...this.props} />
                         )
                 }
             </div>

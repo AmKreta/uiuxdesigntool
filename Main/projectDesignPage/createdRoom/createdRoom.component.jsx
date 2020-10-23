@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState, useRef } from 'react';
 
 import './createdRoom.Styles.scss';
 
@@ -8,6 +8,8 @@ import FooterSection from './footerSection/footerSection.component';
 
 import SetCurrentRoomAndUserListContext from '../setCurrentRoomAndUserListContext';
 import userInfoContext from '../../../globalContext/userInfoContext';
+import ActivePageSetActivePageContext from './activePageSetActivePageContext.component';
+
 
 const CreatedRoom = (props) => {
     /* projectDesignSocket,isAdmin,userList,currentRoom */
@@ -26,11 +28,18 @@ const CreatedRoom = (props) => {
             props.projectDesignSocket.off('newMemberJoined');
         }
     }, []);
+
+    const [footerPagesProp, setFooterPagesProp] = useState({});
+
+    /*  */
+
     return (
         <section className='createdRoom'>
             <VideoConfrence {...props} userName={userName} userId={userId} />
-            <UiUxDesign {...props} />
-            <FooterSection {...props} />
+            <UiUxDesign {...props} setFooterPagesProp={setFooterPagesProp} />
+            <ActivePageSetActivePageContext.Provider value={{ ...footerPagesProp }}>
+                <FooterSection {...props} />
+            </ActivePageSetActivePageContext.Provider>
         </section>
     );
 }
