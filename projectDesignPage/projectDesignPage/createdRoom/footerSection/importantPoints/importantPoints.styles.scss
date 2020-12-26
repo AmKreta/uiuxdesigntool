@@ -1,0 +1,25 @@
+.importantPoints{
+    .showImportantPoints{
+        height: 84%;
+        text-align:left;
+        color:white;
+        font-size:.8em;
+        overflow-y: scroll;
+    }
+    .inputImportantPoint{
+        height:15%;
+        text-align:left;
+        #addImportantPoint{
+            height:100%;
+            background:transparent;
+            border:none;
+            border-bottom:1px solid white;
+            width:80%;
+            color:white;
+        }
+        .sendIcon{
+            color:white;
+            cursor:pointer;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.rgbColorSelector{
+    .rgb {
+        display: block;
+        margin: 5px;
+
+        .colour{
+            padding:2px;
+            font-weight: bold;
+        }
+
+        .selectColor {
+            display: flex;
+            width: 100%;
+            vertical-align: center;
+            margin-top: 10px;
+
+            .rgbInput {
+                width: 79%;
+                margin-right: 1%;
+                -webkit-appearance: none;
+                height: 5px;
+                border-radius: 5px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                margin-top:6px;
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    border:none;
+                }
+
+                &::-moz-range-thumb {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    border:none;
+                }
+
+
+                &.red::-moz-range-thumb{
+                    background:red;
+                }
+                &.blue::-moz-range-thumb{
+                    background:blue;
+                }
+                &.green::-moz-range-thumb{
+                    background:green;
+                }
+                &.alpha::-moz-range-thumb{
+                    background:white;
+                }
+            }
+
+            .textColorInput {
+                width: 20%;
+                margin-left: 1%;
+                text-align: center;
+                max-height: 25px;
+                border: none;
+
+                &:focus {
+                    border: none;
+                }
+            }
+        }
+
+        .colour {
+            height: 2vw;
+            border: 2px solid white;
+        }
+    }
+}

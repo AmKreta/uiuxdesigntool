@@ -1,0 +1,36 @@
+.roomInfo {
+  background: #7a017a;
+  box-shadow: 5px 5px 3px 3px #5f015f;
+  width: 95%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+  margin: 2% 1%;
+}
+.roomInfo .RoomName {
+  width: 30%;
+  opacity: 0.8;
+}
+.roomInfo .enterRoom {
+  width: 70%;
+}
+.roomInfo .enterRoom .roomPassword {
+  display: inline-block;
+}
+.roomInfo .roomMembers {
+  width: 90%;
+  height: 9vw;
+  text-align: center;
+  scrollbar-width: none;
+}
+.roomInfo .roomMembers .memberInfo {
+  margin: 10px;
+  display: inline-block;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.roomInfo .roomMembers .memberInfo .memberUserName {
+  color: white;
+  font-weight: normal;
+}

@@ -1,0 +1,26 @@
+.chatSection {
+    text-align:left;
+    .CHAT {
+        height: 84%;
+        text-align:left;
+        color:white;
+        font-size:.8em;
+        overflow-y: scroll;
+    }
+    .inputChat{
+        height:15%;
+        text-align:left;
+        #send {
+            height:100%;
+            background:transparent;
+            border:none;
+            border-bottom:1px solid white;
+            width:80%;
+            color:white;
+        }
+        .sendIcon{
+            color:white;
+            cursor:pointer;
+        }
+    }
+}

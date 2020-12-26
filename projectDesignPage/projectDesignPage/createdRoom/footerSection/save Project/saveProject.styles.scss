@@ -1,0 +1,44 @@
+.saveProjectContainer {
+    height: 75%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .projectPreview {
+        width: 25%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: scroll;
+        white-space: nowrap;
+        position: relative;
+
+        .projectPagePreview {
+            background: white;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .projectSubmitForm {
+        min-width: 70%;
+        height: 100%;
+
+        #projectSubmissionForm {
+            border-radius: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: .25%;
+
+            #projectDescription {
+                resize: none;
+                padding: 1%;
+                font-family: Arial, Helvetica, sans-serif;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}
