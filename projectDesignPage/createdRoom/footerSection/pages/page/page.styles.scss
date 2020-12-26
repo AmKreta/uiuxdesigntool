@@ -1,0 +1,29 @@
+.pageContainer {
+    height: 100%;
+    width: 25%;
+    display:inline-block;
+    margin-right:1%;
+    position:relative;
+    .page{
+        height:100%;
+        width:100%;
+        background:white;
+        &:hover{
+            opacity:.6;
+        }
+        &.activeProjectPage{
+            opacity:.6;
+        }
+    }
+    .closingIcon{
+        position:absolute;
+        color:black;
+        right:0;
+        top:0;
+        cursor:pointer;
+        margin:1%;
+    }
+    &.preview{
+        width:100%;     
+    }
+}

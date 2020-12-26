@@ -1,0 +1,35 @@
+.createGroup,
+.joinGroup {
+  height: 90%;
+  width: 49%;
+  text-align: center;
+  padding: 1%;
+}
+.createGroup h1,
+.joinGroup h1 {
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.joinGroup {
+  overflow: scroll;
+}
+
+.createGroup {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.createGroup .roomCreateButton, .createGroup .roomInfoInput {
+  width: 60%;
+}
+
+.verticleRule {
+  width: 1px;
+  height: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}

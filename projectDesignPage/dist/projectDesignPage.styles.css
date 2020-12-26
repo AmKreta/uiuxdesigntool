@@ -1,0 +1,14 @@
+.ProjectDesignPage {
+  background: #9400D3;
+  height: calc(100vh - 4.5vw);
+  padding: 0.7%;
+}
+.ProjectDesignPage.createJoinRoom {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.ProjectDesignPage.room {
+  position: relative;
+}

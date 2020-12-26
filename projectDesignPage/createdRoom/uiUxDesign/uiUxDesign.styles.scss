@@ -1,0 +1,59 @@
+.uiUxDesign {
+    background: white;
+    grid-column: 2/ span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+
+    .toolBarA {
+        width: 5%;
+        height: 100%;
+        background: #7a017a;
+
+        .tool {
+            color: white;
+            height: 2vw;
+            width: 2vw;
+
+            &.ellipse {
+                transform: scaleX(1.3);
+            }
+
+            display:block;
+            margin:8px auto;
+            text-align: center;
+            transition:.25s ease-in-out;
+            cursor:pointer;
+
+            &:hover {
+                background: #e002e0;
+                transition: .25s ease-in-out;
+            }
+
+            &.activeTool {
+                background: #e002e0;
+                transition: .25s ease-in-out;
+            }
+
+            &.activeColor {
+                border: 2px solid white;
+            }
+        }
+    }
+
+    .drawingTool {
+        width: 75%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .toolBarB {
+        width: 20%;
+        height: 100%;
+        background: #7a017a;
+        overflow: scroll;
+    }
+}
